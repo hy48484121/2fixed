@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <!-- lity(画像をポップアップ表示) -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js'></script> 
+
+<!-- slick(画像の切り替わり、カルーセル) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+<link rel="stylesheet" href="css/slick.css" type="text/css">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"></button>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link">TOP</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#about" class="nav-link">ABOUT</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#about" class="nav-link">SKILLS</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#works" class="nav-link">WORKS</a>
+      </li>
+      <li class="nav-item ">
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- アコーディオンメニュー -->
+<ul class="menu">
+  <li class="menu__item">
+    <a class="menu__item__link js-menu__item__link" href="">MENU</a>
+    <ul class="submenu">
+      <li class="submenu__item">
+        <a href="#about">ABOUT</a>
+      </li>
+      <li class="submenu__item">
+        <a href="#about">SKILLS</a>
+      </li>
+      <li class="submenu__item">
+        <a href="#works">WORKS</a>
+      </li>
+      <li class="submenu__item">
+        <a href="#contact">CONTACT</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</header>
+<main>
+<div id="top" style="height: 100vh;"><h1>YUTA HOSHINO</h1></div>
+<div id="about" style="height: 100vh;">
+  <h2>ABOUT(SKILLS & PROFILE)</h2>
+  <div class="container d-flex mb-5">
+    <table class="table table-borderless col-3 mx-auto" style="border-style: none;">
+      <t-body>
+        <tr class="tr1">
+          <td class="px-2">名前</td>
+          <td>星野祐太</td>
+        </tr>
+        <tr>
+          <td class="px-2">生年月日</td>
+          <td>1996年3月7日（24歳）</td>
+        </tr>
+        <tr>
+          <td class="px-2">出身</td>
+          <td>大阪府出身</td>
+        </tr>
+        <tr>
+          <td class="px-2">前職</td>
+          <td>商社（営業職）</td>
+        </tr>
+        <tr>
+          <td class="px-2">趣味</td>
+          <td>格闘技</td>
+        </tr>
+      </t-body>
+    </table>
+  </div>
+  <div class="skillset d-flex" id="skills">
+    <div class="fi mx-auto">
+      <div class="inner">
+        <h3 class="py-4">HTML/CSS</h3>
+        <img src="images/html-css.png" alt="" class="icon mb-4">
+        <p>基本的なwebサイト作成、コーディングが可能です。</p>
+      </div>
+    </div>
+    <div class="fi mx-auto">
+      <div class="inner">
+        <h3 class="py-4">Javascript（jQuery）</h3>
+        <img src="images/javascript.png" alt="" class="icon mb-4">
+        <p>HPに使用されるようなアニメーションの実装が可能です。</p>
+      </div>
+    </div>
+    <div class="fi mx-auto">
+      <div class="inner">
+        <h3 class="py-4">Photoshop</h3>
+        <img src="images/photoshop.png" alt="" class="icon mb-4">
+        <p>画像、写真の基本的な編集作業が可能です。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="works">
+  <h2>Works</h2>
+  <div class="slider d-flex">
+    <div class="pre">
+      <img src="images/pr1-top.png">
+      <a href="images/pr1.png" data-lity="data-lity">
+        <div class="mask">
+          <div class="caption"><span>模写作品1</span></div>
+        </div>
+      </a>
+    </div>
+    <div class="pre">
+      <img src="images/pre2-top.png">
+      <a href="images/pre2.png" data-lity="data-lity">
+        <div class="mask">
+          <div class="caption"><span>模写作品2</span></div>
+        </div>
+      </a>
+    </div>
+    <div class="pre">
+      <img src="images/pr3-top.png">
+      <a href="images/pre3.png" data-lity="data-lity">
+        <div class="mask">
+          <div class="caption"><span>模写作品3</span></div>
+        </div>
+      </a>
+    </div>
+    <div class="pre">
+      <img src="images/airbnb-top.png">
+      <a href="images/airbnb.png" data-lity="data-lity">
+        <div class="mask">
+          <div class="caption"><span>模写作品4</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="contact" id="contact">
+  <h2 class="mb-0">Contact</h2>
+  <div class="form">
+    <form class="" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezsk1ovFsd0r8LjS11N2qCfelRNJIdFTHE_0rZNqpoyQ81Tw/formResponse" method="post">
+      <input type="text" name="entry.2005620554" value="" placeholder="名前">
+      <input type="email" name="entry.1045781291" value="" placeholder="メールアドレス">
+      <textarea name="entry.839337160" rows="5" cols="80" placeholder="お問い合わせ内容"></textarea><br>
+      <button type="submit" name="submit" class="btn btn-info ">送信</button>
+    </form>
+  </div>
+</div>
+<footer><p>©2020/Yuta Hoshino /All Right Reserved</p></footer>
+</main>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript">
+  // 全体を一旦隠して表示
+$('body').hide().fadeIn(1500);
+// アコーディオンメニュー
+$(function(){
+    $('.js-menu__item__link').each(function(){
+        $(this).on('click',function(){
+            $("+.submenu",this).slideToggle();
+            return false;
+        });
+    });
+});
+// スキル部分を左から順番に時間差で表示させる
+$(function(){
+    var effect_pos = 40; // 画面下からどの位置でフェードさせるか(px)
+    var effect_move = 40; // どのぐらい要素を動かすか(px)
+    var effect_time = 800; // エフェクトの時間(ms) 1秒なら1000
+    // フェード前のcss
+    $('.skillset').css({
+       opacity: 0
+    });
+    $('.skillset').children().each(function(){
+        $(this).css({
+          opacity: 0,
+          transform: 'translateY('+ effect_move +'px)',
+          transition: effect_time + 'ms'
+        });
+    });
+    // スクロールまたはロードするたびに実行
+    $(window).on('scroll load', function(){
+        var scroll_top = $(this).scrollTop();
+        var scroll_btm = scroll_top + $(this).height();
+        effect_pos = scroll_btm - effect_pos;
+        // effect_posがthis_posを超えたとき、エフェクト
+    $('.skillset').each( function() {
+        var this_pos = $(this).offset().top;
+         if ( effect_pos > this_pos ) {
+            $(this).css({
+                opacity: 1,
+                transform: 'translateY(0)'
+    });
+        //  表示を遅らせる
+                $(this).children().each(function(i){
+                    $(this).delay(100 + i*200).queue(function(){
+                        $(this).css({
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }).dequeue();
+                  });
+              });
+            }
+        });
+    });
+});
+// スリック、一定時間ごとに画像が移動
+$('.slider').slick({
+  slidesToShow: 1, /*表示するスライド数*/
+  slidesToScroll:1, 
+  autoplay: true,
+  autoplaySpeed: 4000, /* スライド移動の間隔*/
+  // dots: true,
+  infinite: true, // 無限スクロール
+  // centerMode: true,
+  prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/arrow-left.png" style="width: 20px;"></div>',
+  nextArrow: '<div class="slide-arrow next-arrow"><img src="images/arrow-right.png" style="width: 20px;"></div>'
+});
+</script>
+</body>
+</html>

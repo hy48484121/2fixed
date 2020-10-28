@@ -1,0 +1,331 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    background: #f8f8f8;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+@media screen and (min-width: 769px) { 
+
+.navbar {
+  background: #ddd;
+  opacity: 0.8;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+.nav-link:hover {
+  display: block;
+}
+.menu__item {
+  display: none;
+}
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: lighter;
+  line-height: 100vh;
+}
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0;
+  padding: 20px 0;
+}
+.fi {
+  position: relative;
+  text-align: center;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  list-style: none;
+}
+.inner {
+  position: absolute;
+  padding: 0 18px;
+}
+.icon {
+  width: 110px;
+  height: 110px;
+}
+.slider {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.pre {
+  position:	relative;
+}
+.pre img {
+  width: 600px;
+  height: 460px;
+}
+.pre .caption {
+  font-size: 20px;
+  color:#fff;
+  padding-top: 60px;
+  padding-left: 20px;
+  text-align: left;
+}
+.pre .mask {
+  width:  100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* マスクを表示しない */
+  background-color: rgba(0,0,0,0.4);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.pre:hover .mask {
+  opacity: 1; /* マスクを表示する */
+  padding-left: 30px;	/* 右にずらす */
+}
+.slick-slide img {
+  width: 100%; 
+}
+.slick-slide {
+  margin: 0 10px 0; 
+}
+.slick-arrow {
+  z-index:10; /* 矢印を最前面へ */
+}
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+}
+.prev-arrow{
+  left: 30px;
+}
+.next-arrow{
+  right: 30px;
+}
+#contact{
+  text-align: center;
+  background-color: rgba(131, 158, 198, 0.2);
+  padding: 20px 0;
+  margin-top: 200px;
+  height: 420px;
+}
+.form input,button{
+  width: 100px;
+  display: block;
+  margin: 20px auto;
+}
+.form input,textarea{
+  width: 350px;
+  border-radius: 5px;
+  border: none;
+ padding: 0 5px;
+}
+} 
+
+@media screen and (min-width:320px) and (max-width: 768px) {
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  h1 {
+    text-align: center;
+    line-height: 100vh;
+  }
+  .navbar {
+    display: none;
+  }
+ 
+  .menu__item {
+    background: #f0f0f0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 1px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+  }
+  .menu__item__link {
+    color: black;
+    display: block;
+    padding: 1rem;
+  }
+  .submenu {
+    background: #fff;
+    display: none;
+  }
+  .submenu__item {
+    border-bottom: 1px solid #d3def1;
+    padding: 1rem;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 280px;
+  }
+  .table {
+    width: 60vw;
+    margin: 0 auto;
+  }
+  .skillset {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon {
+    display: none;
+  }
+  .fi {
+    width: 200px;
+    height: 160px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    margin: 40px auto;
+    text-align: center;
+  }
+  .inner p {
+    padding: 20px 10px;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column;
+  }  
+  .pre {
+    position:		relative;
+    margin: 40px auto;
+  }
+  .pre img {
+    width: 300px; 
+    height: 250px;
+  }
+  .pre .caption {
+    font-size:		20px;
+    color:			#fff;
+    padding-top:		80px;
+    padding-left:		0px;
+    text-align: left;
+  }
+  .pre .mask {
+    width: 80%;
+    height: 100%;
+    position:		absolute;
+    top: 0;
+    left: 10%;
+    opacity:		0;	/* マスクを表示しない */
+    background-color:	rgba(0,0,0,0.4);
+    -webkit-transition:	all 0.6s ease;
+    transition:		all 0.6s ease;
+  }
+  .pre:hover .mask {
+    opacity:		1;	/* マスクを表示する */
+  }
+  .slick-slide img {
+    width: 80%; 
+    margin: 0 auto;
+  }
+  .slide-arrow img {
+    display: none;
+  }
+  #contact{
+    text-align: center;
+    background-color: rgba(93, 133, 201, 0.25);
+    padding: 20px 0;
+    height: 280px;
+  }
+  .form input,button{
+    width: 70px;
+    display: block;
+    margin: 8px auto;
+  }
+  .form input,textarea{
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 5px;
+  }
+}
