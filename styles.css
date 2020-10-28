@@ -117,7 +117,7 @@ h2 {
   margin: 40px 0;
   padding: 20px 0;
 }
-.fi {
+.lang {
   position: relative;
   text-align: center;
   width: 320px;
@@ -247,11 +247,9 @@ h2 {
   #about {
     display: flex;
     flex-direction: column;
-    margin-bottom: 280px;
   }
   .table {
-    width: 60vw;
-    margin: 0 auto;
+    width: 50vw;
   }
   .skillset {
     display: flex;
@@ -260,12 +258,12 @@ h2 {
   .icon {
     display: none;
   }
-  .fi {
+  .lang {
     width: 200px;
     height: 160px;
     border-radius: 8px;
     border: 1px solid #666;
-    margin: 40px auto;
+    margin: 50px auto;
     text-align: center;
   }
   .inner p {
@@ -277,7 +275,7 @@ h2 {
   }  
   .pre {
     position:		relative;
-    margin: 40px auto;
+    margin: 60px auto;
   }
   .pre img {
     width: 300px; 
