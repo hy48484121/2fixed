@@ -144,10 +144,11 @@ h2 {
 }
 .pre {
   position:	relative;
+  height: 550px;
 }
 .pre img {
   width: 600px;
-  height: 460px;
+  height: 550px;
 }
 .pre .caption {
   font-size: 20px;
@@ -185,28 +186,13 @@ h2 {
   top: 50%;
 }
 .prev-arrow{
-  left: 30px;
+  left: -30px;
 }
 .next-arrow{
-  right: 30px;
+  right: -30px;
 }
-#contact{
-  text-align: center;
-  background-color: rgba(131, 158, 198, 0.2);
-  padding: 20px 0;
-  margin-top: 200px;
-  height: 420px;
-}
-.form input,button{
-  width: 100px;
-  display: block;
-  margin: 20px auto;
-}
-.form input,textarea{
-  width: 350px;
-  border-radius: 5px;
-  border: none;
- padding: 0 5px;
+.form-group {
+  font-size: 14px;
 }
 } 
 
@@ -314,22 +300,5 @@ h2 {
   }
   .slide-arrow img {
     display: none;
-  }
-  #contact{
-    text-align: center;
-    background-color: rgba(93, 133, 201, 0.25);
-    padding: 20px 0;
-    height: 280px;
-  }
-  .form input,button{
-    width: 70px;
-    display: block;
-    margin: 8px auto;
-  }
-  .form input,textarea{
-    width: 200px;
-    border-radius: 5px;
-    border: none;
-    padding: 0 5px;
   }
 }
