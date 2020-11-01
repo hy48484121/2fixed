@@ -6,6 +6,10 @@
 	<title>My Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+ <!-- Font Awesome  -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
   <link href="styles.css" rel="stylesheet">
   <!-- lity(画像をポップアップ表示) -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
@@ -155,37 +159,42 @@
   </div>
 </div>
 <div class="container" id="contact">
-  <div class="row">
-    <div class="col-md-8 mx-auto">
+    <div class="input-item col-md-8 mx-auto">
       <h2>Contact</h2>
-      <form action="https://api.staticforms.xyz/submit" method="post">
-        <input type="hidden" name="accessKey" value="アクセスキー">
-        <input type="hidden" name="subject" value="件名">
-        <input type="hidden" name="redirectTo" value="絶対パス">
+      <form action="thanks.html" method="post">
+        <input type="hidden" name="accessKey" value="232e3385-d548-43da-906e-f35bcf34e871">
+        <input type="hidden" name="subject" value="お問い合わせ">
+        <input type="hidden" name="redirectTo" value="">
+
         <div class="form-group row">
-          <label for="inputName" class="col-sm-2 col-form-label">お名前</label>
-          <div class="col-sm-8">
-            <input type="text" name="name" class="form-control" id="inputName">
+          <label for="name" class="col-sm-2 col-form-label">お名前</label>
+          <div class="last col-sm-8">
+            <input type="text" name="name" class="form-control" id="name">
+            <span id="name_error" class="error_m"></span>
           </div>
         </div>
         <div class="form-group row">
-          <label for="inputEmail" class="col-sm-2 col-form-label">メールアドレス</label>
-          <div class="col-sm-8">
-            <input type="text" name="email" class="form-control" id="inputEmail">
+          <label for="mail" class="col-sm-2 col-form-label">メールアドレス</label>
+          <div class="last col-sm-8">
+            <input type="text" name="email" class="form-control" id="mail">
+            <span id="mail_error" class="error_m"></span>
+            <p >※一週間以上返答がない場合は、お手数ですが、メールアドレスを確認のうえ再度お問い合わせください。</p>
           </div>
         </div>
         <div class="form-group row">
-          <label for="inputTextarea" class="col-sm-2 col-form-label">メッセージ</label>
-          <div class="col-sm-8">
-            <textarea name="message" rows="3" class="form-control" id="inputTextarea"></textarea>
+          <label for="textarea" class="col-sm-2 col-form-label">メッセージ<br>(400文字以内)</label>
+          <div class="last col-sm-8">
+            <textarea name="message" rows="3" class="form-control" id="message" maxlength="400"></textarea>
+            <span id="message_error" class="error_m"></span>
+
           </div>
         </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary mb-2">送信</button>
+        <div class="text-center transmission">
+          <input class="btn_submit" id="btn_submit" type="submit" value="送信" href="#top">
         </div>
+
       </form>
     </div>
-  </div>
 </div>
 <footer><p>©2020/Yuta Hoshino /All Right Reserved</p></footer>
 </main>
@@ -265,23 +274,71 @@ $('.slider').slick({
   nextArrow: '<div class="slide-arrow next-arrow"><img src="images/arrow-right.png" style="width: 20px;"></div>'
 });
 
-$(function () {
-  $("#contact").validate({
-    rules: {
-      name: {
-        required: "*お名前を入力してください", // 入力必須チェック
-        rangelength: [1, 50], // 最小１文字、最大５０文字
-      },
-      email: {
-        required: "*メールアドレスを入力してください", // 入力必須チェック
-        email: "*正しいメールアドレス形式で入力してください", // メールアドレス形式チェック
-      },
-      message: {
-        required: "*メッセージを入力してください" // 入力必須チェック
-      }
-    }
-  });
+$(function(){
+	$('input:submit[id="btn_submit"]').click(function(){
+		if(!input_check()){
+			return false;
+		}
+	});
 });
+// 入力内容チェックのための関数
+function input_check(){
+	var result = true;
+
+	// エラー用装飾のためのクラスリセット
+	$('#name').removeClass("inp_error");
+	$('#mail').removeClass("inp_error");
+	$('#message').removeClass("inp_error");
+
+	// 入力エラー文をリセット
+	$("#name_error").empty();
+	$("#mail_error").empty();
+	$("#message_error").empty();
+
+	// 入力内容セット
+	var name   = $("#name").val();
+	var mail  = $("#mail").val();
+	var message  = $("#message").val();
+
+	// 入力内容チェック
+
+	// お名前
+	if(name == ""){
+		$("#name_error").html(" お名前は必須です。");
+		$("#name").addClass("inp_error");
+		result = false;
+	}else if(name.length > 25){
+		$("#name_error").html(" お名前は25文字以内で入力してください。");
+		$("#name").addClass("inp_error");
+		result = false;
+	}
+	// メールアドレス
+	if(mail == ""){
+		$("#mail_error").html(" メールアドレスは必須です。");
+		$("#mail").addClass("inp_error");
+		result = false;
+	}else if(!mail.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
+		$('#mail_error').html(" 正しいメールアドレスを入力してください。");
+		$("#mail").addClass("inp_error");
+		result = false;
+	}else if(mail.length > 200){
+		$('#mail_error').html(" 正しいメールアドレスを入力してください。");
+		$("#mail").addClass("inp_error");
+		result = false;
+	}
+	// お問い合わせ内容
+	if(message == ""){
+		$("#message_error").html(" お問い合わせ内容は必須です。");
+		$("#message").addClass("inp_error");
+		result = false;
+	}else if(message.match(/^[ 　\r\n\t]*$/)){
+		$('#message_error').html(" お問い合わせ内容は必須です。");
+		$("#message").addClass("inp_error");
+		result = false;
+	}
+
+	return result;
+}
 </script>
 </body>
 </html>

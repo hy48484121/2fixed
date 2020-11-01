@@ -194,6 +194,44 @@ h2 {
 .form-group {
   font-size: 14px;
 }
+span.error_m {
+	font-size: 15px;
+	font-weight: normal;
+	color: #FF4040;
+	display: block;
+	margin: 0;
+}
+#contact .input-item .form-group .last input[type="text"].inp_error,
+#contact .input-item .form-group .last textarea.inp_error {
+    border: 1px solid #F88A8A;
+    background: #F4D4D4;
+}
+#contact .input-item .transmission input[type="submit"] {
+	border: 2px double #FFFFFF;
+	background: #F4D4D4;
+	font-size: 22px;
+	color: #ffffff;
+	width: 200px;
+	padding: 20px 0;
+	margin: 0 auto;
+	display: block;
+	opacity: 1.0;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#contact .input-item .transmission input[type="submit"]:hover {
+  background: #FF1515;
+	opacity:0.85;
+	-webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
 } 
 
 @media screen and (min-width:320px) and (max-width: 768px) {
@@ -301,4 +339,9 @@ h2 {
   .slide-arrow img {
     display: none;
   }
+#contact .input-item .form-group .last input[type="text"].inp_error,
+#contact .input-item .form-group .last textarea .inp_error {
+    border: 1px solid #F88A8A;
+    background: #F4D4D4;
+}
 }
