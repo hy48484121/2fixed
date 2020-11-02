@@ -160,48 +160,45 @@
   </div>
 </div>
 <div class="container" id="contact">
-    <div class="input-item col-md-8 mx-auto">
-      <h2>Contact</h2>
-      <form action="thanks.html" method="post">
-        <input type="hidden" name="accessKey" value="232e3385-d548-43da-906e-f35bcf34e871">
-        <input type="hidden" name="subject" value="お問い合わせ">
-        <input type="hidden" name="redirectTo" value="">
+  <div class="input-item col-md-8 mx-auto">
+    <h2>Contact</h2>
+    <form action="thanks.html" method="post">
+      <input type="hidden" name="accessKey" value="232e3385-d548-43da-906e-f35bcf34e871">
+      <input type="hidden" name="subject" value="お問い合わせ">
+      <input type="hidden" name="redirectTo" value="">
 
-        <div class="form-group row">
-          <label for="name" class="col-sm-2 col-form-label">お名前</label>
-          <div class="last col-sm-8">
-            <input type="text" name="name" class="form-control" id="name">
-            <span id="name_error" class="error_m"></span>
-          </div>
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">お名前</label>
+        <div class="last col-sm-8">
+          <input type="text" name="name" class="form-control" id="name">
+          <span id="name_error" class="error_m"></span>
         </div>
-        <div class="form-group row">
-          <label for="mail" class="col-sm-2 col-form-label">メールアドレス</label>
-          <div class="last col-sm-8">
-            <input type="text" name="email" class="form-control" id="mail">
-            <span id="mail_error" class="error_m"></span>
-          </div>
+      </div>
+      <div class="form-group row">
+        <label for="mail" class="col-sm-2 col-form-label">メールアドレス</label>
+        <div class="last col-sm-8">
+          <input type="text" name="email" class="form-control" id="mail">
+          <span id="mail_error" class="error_m"></span>
         </div>
-        <div class="form-group row">
-          <label for="textarea" class="col-sm-2 col-form-label">メッセージ<br>(400文字以内)</label>
-          <div class="last col-sm-8">
-            <textarea name="message" rows="3" class="form-control" id="message" maxlength="400"></textarea>
-            <span id="message_error" class="error_m"></span>
-
-          </div>
+      </div>
+      <div class="form-group row">
+        <label for="textarea" class="col-sm-2 col-form-label">メッセージ<br>(400文字以内)</label>
+        <div class="last col-sm-8">
+          <textarea name="message" rows="3" class="form-control" id="message" maxlength="400"></textarea>
+          <span id="message_error" class="error_m"></span>
         </div>
-        <div class="text-center transmission">
-          <input class="btn_submit" id="btn_submit" type="submit" value="送信" href="#top">
-        </div>
-
-      </form>
-    </div>
+      </div>
+      <div class="text-center transmission">
+        <input class="btn_submit" id="btn_submit" type="submit" value="送信" href="#top">
+      </div>
+    </form>
+  </div>
 </div>
 <footer><p>©2020/Yuta Hoshino /All Right Reserved</p></footer>
 </main>
 <!-- バリデーション用 -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
-
 <!-- slick用 -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -302,7 +299,7 @@ function input_check(){
 
 	// 入力内容チェック
 
-	// お名前
+	// 名前
 	if(name == ""){
 		$("#name_error").html(" お名前は必須です。");
 		$("#name").addClass("inp_error");
@@ -336,7 +333,6 @@ function input_check(){
 		$("#message").addClass("inp_error");
 		result = false;
 	}
-
 	return result;
 }
 </script>
