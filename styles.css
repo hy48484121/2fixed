@@ -107,6 +107,7 @@ h2 {
 }
 /* トップの背景がかわる */
 #top {
+  height: 100vh;
   background: linear-gradient(270deg, #fff, rgb(241, 241, 182), #fff);
   background-size: 600% 600%;
 
@@ -276,6 +277,9 @@ h2 {
     border-bottom: 1px solid #d3def1;
     padding: 1rem;
   }
+  #top {
+    height: 850px;
+  }
   #about {
     display: flex;
     flex-direction: column;
@@ -288,26 +292,23 @@ h2 {
     line-height: 1.5;
     margin: 0 auto;
   }
+  .icon {
+    display: none;
+  }
   .skillset {
     display: flex;
     flex-direction: column;
   }
-  .icon {
-    display: none;
-  }
-  #skills {
-    height: 70vh;
-  }
   .lang {
     width: 220px;
-    height: 120px;
+    height: 130px;
     border-radius: 8px;
     border: 1px solid #666;
-    margin: 25px auto;
+    margin: 30px auto;
     text-align: center;
   }
   .inner p {
-    padding: 15px 10px;
+    padding: 10px;
   }
   #page-top {
     position: fixed;
@@ -373,8 +374,8 @@ h2 {
     text-align: center;
     display: block;
     width: 180px;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
     color: #fff;
     margin: 30px auto;
     border: 1px solid #000;
