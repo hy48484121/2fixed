@@ -53,7 +53,7 @@
     <a class="menu__item__link js-menu__item__link" href="">MENU</a>
     <ul class="submenu">
       <li class="submenu__item">
-        <a href="#about">ABOUT</a>
+        <a href="#top">TOP</a>
       </li>
       <li class="submenu__item">
         <a href="#about">SKILLS</a>
@@ -70,28 +70,28 @@
 </header>
 <main>
 <div id="top" style="height: 100vh;">
-  <h1>YUTA HOSHINO</h1>
-  <div class="container" id="about">
-    <table class="table table-borderless col-3 mx-auto" style="border-style: none;">
+    <h1 class="pt-5 text-center">YUTA HOSHINO</h1>
+  <div class="container mt-5" id="about">
+    <table class="table table-borderless col-5 text-left" style="border-style: none;">
       <t-body>
-        <tr>
-          <td class="px-2">名前</td>
+        <tr class="text-left">
+          <td class="px-1">名前</td>
           <td>星野祐太</td>
         </tr>
-        <tr>
-          <td class="px-2">生年月日</td>
+        <tr class="text-left">
+          <td class="px-1">生年月日</td>
           <td>1996/3/7（24歳）</td>
         </tr>
-        <tr>
-          <td class="px-2">前職</td>
+        <tr class="text-left">
+          <td class="px-1">前職</td>
           <td>繊維系商社（営業）</td>
         </tr>
       </t-body>
     </table>
-    <div class="comment text-center mt-5 mx-auto">
+    <div class="comment col-8">
       <p>2020年7月より独学でプログラミングをスタートしました。</p>
-      <p>フロントエンドエンジニアを目指し、現在はHTML、CSS、Javascriptを学習しています。</p>
-      <p>その他、将来的にはReactやPHPも習得し,スキルアップを目指します</p>
+      <p>フロントエンドエンジニアを目指し、下記の3スキルを習得中。</p>
+      <p>将来的にはReactやPHPを習得し、<br>多様な機能の実装ができるフロントエンドエンジニアを目指します。</p>
     </div>
   </div>
 </div>
@@ -102,7 +102,7 @@
       <div class="inner">
         <h3 class="py-3">HTML/CSS</h3>
         <img src="images/html-css.png" alt="icon1" class="icon mb-4">
-        <p>基本的なコーディングやWebサイト制作が可能です。</p>
+        <p>基本的なコーディング、Webサイト制作が可能です。</p>
       </div>
     </div>
     <div class="lang mx-auto">
@@ -121,14 +121,20 @@
     </div>
   </div>
 </div>
-<div id="works" class="mb-5">
+<p id="page-top"><a href="#top">TOP</a></p>
+<div id="works">
   <h2>Works</h2>
-  <div class="slider d-flex mb-5">
+  <div class="slider d-flex">
     <div class="pre">
       <img src="images/pr1-top.png">
       <a href="images/pr1.png" data-lity="data-lity">
         <div class="mask">
-          <div class="caption"><span>模写作品1</span></div>
+          <div class="caption">
+            <span class="d-block mb-1">模写作品1</span><br>
+            <span class="d-block mb-1">使用言語:HTML,CSS</span><br>
+            <span>制作期間:5日</span>
+            <span></span>
+          </div>
         </div>
       </a>
     </div>
@@ -136,7 +142,11 @@
       <img src="images/pre2-top.png">
       <a href="images/pre2.png" data-lity="data-lity">
         <div class="mask">
-          <div class="caption"><span>模写作品2</span></div>
+          <div class="caption">
+            <span class="d-block mb-1">模写作品2</span><br>
+            <span class="d-block mb-1">使用言語:HTML,CSS</span><br>
+            <span>制作期間:1週間〜10日</span>
+          </div>
         </div>
       </a>
     </div>
@@ -144,7 +154,11 @@
       <img src="images/pr3-top.png">
       <a href="images/pre3.png" data-lity="data-lity">
         <div class="mask">
-          <div class="caption"><span>模写作品3</span></div>
+          <div class="caption">
+            <span class="d-block mb-1">模写作品3</span><br>
+            <span class="d-block mb-1">使用言語:HTML,CSS</span><br>
+            <span>制作期間:約10日</span>
+          </div>
         </div>
       </a>
     </div>
@@ -152,55 +166,29 @@
       <img src="images/airbnb-top.png">
       <a href="images/airbnb.png" data-lity="data-lity">
         <div class="mask">
-          <div class="caption"><span>模写作品4</span></div>
+          <div class="caption">
+            <span class="d-block mb-1">模写作品4</span><br>
+            <span class="d-block mb-1">使用言語:HTML,CSS</span><br>
+            <span>制作期間:3週間</span>
+          </div>
         </div>
       </a>
     </div>
   </div>
 </div>
 <div class="container" id="contact">
-  <div class="input-item col-md-8 mx-auto">
+  <div class="col-md-8 mx-auto">
     <h2>Contact</h2>
-    <form action="https://hy48484121.github.io/ThanksPage/" method="post">
-      <input type="hidden" name="accessKey" value="232e3385-d548-43da-906e-f35bcf34e871">
-      <input type="hidden" name="subject" value="お問い合わせ">
-      <input type="hidden" name="redirectTo" value="">
-
-      <div class="form-group row">
-        <label for="name" class="col-sm-2 col-form-label">お名前</label>
-        <div class="last col-sm-8">
-          <input type="text" name="name" class="form-control" id="name">
-          <span id="name_error" class="error_m"></span>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="mail" class="col-sm-2 col-form-label">メールアドレス</label>
-        <div class="last col-sm-8">
-          <input type="text" name="email" class="form-control" id="mail">
-          <span id="mail_error" class="error_m"></span>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="textarea" class="col-sm-2 col-form-label">メッセージ<br>(400文字以内)</label>
-        <div class="last col-sm-8">
-          <textarea name="message" rows="3" class="form-control" id="message" maxlength="400"></textarea>
-          <span id="message_error" class="error_m"></span>
-        </div>
-      </div>
-      <div class="text-center transmission">
-        <input class="btn_submit" id="btn_submit" type="submit" value="送信">
-      </div>
-    </form>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSffLEH8NVsfAUfNDOh8ogWfercLI1m0m62QYPj-PwAOBvA29A/viewform?usp=sf_link" class="bg-primary">お問い合わせはこちら</a>
   </div>
 </div>
-<footer><p>©2020/Yuta Hoshino /All Right Reserved</p></footer>
+<footer class="text-center"><p>©2020/Yuta Hoshino /All Right Reserved</p></footer>
 </main>
-<!-- バリデーション用 -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
 <!-- slick用 -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script src="ityped.js"></script>
 
 <script type="text/javascript">
 
@@ -269,71 +257,34 @@ $('.slider').slick({
   prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/arrow-left.png" style="width: 20px;"></div>',
   nextArrow: '<div class="slide-arrow next-arrow"><img src="images/arrow-right.png" style="width: 20px;"></div>'
 });
-
-$(function(){
-	$('input:submit[id="btn_submit"]').click(function(){
-		if(!input_check()){
-			return false;
-		}
-	});
+// TOPに戻るボタン
+$(function() {
+    var showFlag = false;
+    var topBtn = $('#page-top');    
+    topBtn.css('bottom', '-600px');
+    var showFlag = false;
+    //TOPから600に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 600) {
+            if (showFlag == false) {
+                showFlag = true;
+                topBtn.stop().animate({'bottom' : '20px'}, 200); 
+            }
+        } else {
+            if (showFlag) {
+                showFlag = false;
+                topBtn.stop().animate({'bottom' : '-100px'}, 200); 
+            }
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
 });
-// 入力内容チェックのための関数
-function input_check(){
-	var result = true;
-
-	// エラー用装飾のためのクラスリセット
-	$('#name').removeClass("inp_error");
-	$('#mail').removeClass("inp_error");
-	$('#message').removeClass("inp_error");
-
-	// 入力エラー文をリセット
-	$("#name_error").empty();
-	$("#mail_error").empty();
-	$("#message_error").empty();
-
-	// 入力内容セット
-	var name   = $("#name").val();
-	var mail  = $("#mail").val();
-	var message  = $("#message").val();
-
-	// 入力内容チェック
-
-	// 名前
-	if(name == ""){
-		$("#name_error").html(" お名前は必須です。");
-		$("#name").addClass("inp_error");
-		result = false;
-	}else if(name.length > 25){
-		$("#name_error").html(" お名前は25文字以内で入力してください。");
-		$("#name").addClass("inp_error");
-		result = false;
-	}
-	// メールアドレス
-	if(mail == ""){
-		$("#mail_error").html(" メールアドレスは必須です。");
-		$("#mail").addClass("inp_error");
-		result = false;
-	}else if(!mail.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
-		$('#mail_error').html(" 正しいメールアドレスを入力してください。");
-		$("#mail").addClass("inp_error");
-		result = false;
-	}else if(mail.length > 200){
-		$('#mail_error').html(" 正しいメールアドレスを入力してください。");
-		$("#mail").addClass("inp_error");
-		result = false;
-	}
-	// お問い合わせ内容
-	if(message == ""){
-		$("#message_error").html(" お問い合わせ内容は必須です。");
-		$("#message").addClass("inp_error");
-		result = false;
-	}else if(message.match(/^[ 　\r\n\t]*$/)){
-		$('#message_error').html(" お問い合わせ内容は必須です。");
-		$("#message").addClass("inp_error");
-		result = false;
-	}
-	return result;
-}
 </script>
 </body>
 </html>

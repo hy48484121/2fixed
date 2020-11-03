@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 body {
     line-height:1;
-    background: #f8f8f8;
+    background: #fff;
 }
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
@@ -96,11 +96,8 @@ input, select {
   display: none;
 }
 h1 {
-  text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: lighter;
-  line-height: 20vh;
-  margin-bottom: 100px;
 }
 h2 {
   text-align: center;
@@ -108,7 +105,28 @@ h2 {
   margin: 40px 0;
   padding: 20px 0;
 }
-#about {
+/* トップの背景がかわる */
+#top {
+  background: linear-gradient(270deg, #fff, rgb(241, 241, 182), #fff);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.table,
+.comment {
+  margin: 120px 30px;
   line-height: 2;
 }
 .lang {
@@ -123,29 +141,50 @@ h2 {
 .inner {
   position: absolute;
   top: 8%;
-  padding: 0 18px;
+  padding: 0 32px;
 }
 .icon {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
+}
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+}
+#page-top a {
+  background: #666;
+  text-decoration: none;
+  color: #fff;
+  width: 80px;
+  padding: 20px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+#page-top a:hover {
+  text-decoration: none;
+  background: #666;
 }
 .slider {
   margin: 0 auto;
   flex-wrap: wrap;
   width: 50%;
+  height: 700px;
 }
 .pre {
   position:	relative;
-  height: 550px;
+  margin: 40px 0;
 }
 .pre img {
-  width: 600px;
-  height: 550px;
+  width: 520px;
+  height: 460px;
 }
 .pre .caption {
   font-size: 20px;
   color:#fff;
-  padding-top: 60px;
+  padding-top: 50px;
   padding-left: 20px;
   text-align: left;
 }
@@ -186,55 +225,30 @@ h2 {
 .form-group {
   font-size: 14px;
 }
-span.error_m {
-	font-size: 15px;
-	font-weight: normal;
-	color: #FF4040;
-	display: block;
-	margin: 0;
+#contact a {
+  text-align: center;
+  display: block;
+  width: 220px;
+  height: 80px;
+  line-height: 80px;
+  color: #fff;
+  margin: 30px auto;
+  border: 1px solid #000;
+  border-radius: 5px;
+  opacity: 0.8;
 }
-#contact .input-item .form-group .last input[type="text"].inp_error,
-#contact .input-item .form-group .last textarea.inp_error {
-    border: 1px solid #F88A8A;
-    background: #F4D4D4;
+#contact a:hover {
+  opacity: 1;
+  text-decoration: none;
 }
-#contact .input-item .transmission input[type="submit"] {
-	border: 2px double #FFFFFF;
-	background: #F4D4D4;
-	font-size: 22px;
-	color: #ffffff;
-	width: 200px;
-	padding: 20px 0;
-	margin: 0 auto;
-	display: block;
-	opacity: 1.0;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-}
-
-#contact .input-item .transmission input[type="submit"]:hover {
-  background: #FF1515;
-	opacity:0.85;
-	-webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  transition: 0.5s;
+#contact {
+  padding: 60px 0;
 }
 } 
 
 @media screen and (min-width:320px) and (max-width: 768px) {
-  h1 {
-    text-align: center;
-    line-height: 20vh;
-  }
   h2 {
     text-align: center;
-    font-size: 20px;
-    padding: 15px 0;
   }
   .navbar {
     display: none;
@@ -268,10 +282,11 @@ span.error_m {
   }
   .table {
     width: 50vw;
+    margin: 50px auto 150px;
   }
   .comment {
-    width: 70vw;
     line-height: 1.5;
+    margin: 0 auto;
   }
   .skillset {
     display: flex;
@@ -294,6 +309,26 @@ span.error_m {
   .inner p {
     padding: 15px 10px;
   }
+  #page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+  }
+  #page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 50px;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+  }
+  #page-top a:hover {
+    text-decoration: none;
+    background: #666;
+  }
   .slider {
     display: flex;
     flex-direction: column;
@@ -304,13 +339,13 @@ span.error_m {
   }
   .pre img {
     width: 300px; 
-    height: 250px;
+    height: 260px;
   }
   .pre .caption {
     font-size:		20px;
     color:			#fff;
-    padding-top:		80px;
-    padding-left:		0px;
+    padding-top:		40px;
+    padding-left:		10px;
     text-align: left;
   }
   .pre .mask {
@@ -334,16 +369,20 @@ span.error_m {
   .slide-arrow img {
     display: none;
   }
-  span.error_m {
-    font-size: 15px;
-    font-weight: normal;
-    color: #FF4040;
+  #contact a {
+    text-align: center;
     display: block;
-    margin: 0;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    margin: 30px auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    opacity: 0.8;
   }
-#contact .input-item .form-group .last input[type="text"].inp_error,
-#contact .input-item .form-group .last textarea .inp_error {
-    border: 1px solid #F88A8A;
-    background: #F4D4D4;
-}
+  #contact a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
 }
