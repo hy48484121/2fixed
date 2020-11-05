@@ -243,7 +243,7 @@ h2 {
   }
   /* トップの背景 グラデ */
   #top {
-  height: 100vh;
+  height: 900px;
   background: linear-gradient(270deg, #fff, rgb(241, 241, 182), #fff);
   background-size: 600% 600%;
 
