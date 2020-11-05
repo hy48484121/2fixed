@@ -241,10 +241,12 @@ h2 {
   h2 {
     text-align: center;
   }
-  /* トップの背景 グラデ */
   #top {
-  height: 900px;
-  background: linear-gradient(270deg, #fff, rgb(241, 241, 182), #fff);
+        height: 850px;
+  }
+  /* トップの背景 グラデ */
+  * {
+  background: linear-gradient(270deg, #fff, rgb(241, 241, 228), #fff);
   background-size: 600% 600%;
 
   -webkit-animation: AnimationName 20s ease infinite;
