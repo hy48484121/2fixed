@@ -22,20 +22,22 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+  <nav class="navbar navbar-expand-md fixed-top">
+  <button class="navbar-toggler nav-toggle" type="button">
+    <div>
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+    </div>
+  </button>
+    <ul class=" navbar-nav gloval-nav">
     <li class="nav-item">
-    <a class="nav-link" href="#">HOME</a>
+    <a class="nav-link" href="#top">HOME</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#about">ABOUT</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#about">SKILLS</a>
+      <a class="nav-link" href="#skills">SKILLS</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#works">WORKS</a>
@@ -44,9 +46,7 @@
       <a class="nav-link" href="#contact">CONTACT</a>
     </li>
     </ul>
-    </div>
   </nav>
-
 </header>
 <main>
 <div id="top">
@@ -174,6 +174,13 @@
 
   // 全体を一旦隠して表示
 $('body').hide().fadeIn(1500);
+
+// ハンバーガー  トグル
+$(function() {
+$('.nav-toggle').on('click', function() {
+$('header').toggleClass('open');
+});
+});
 
 // スキル部分を左から順番に時間差で表示させる
 $(function(){
